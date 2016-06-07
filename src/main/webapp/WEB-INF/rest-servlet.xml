@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/websocket
+        http://www.springframework.org/schema/websocket/spring-websocket.xsd">
+
+	<context:component-scan base-package="cn.com.yangdi.notify.web.api" />
+
+	<mvc:annotation-driven />
+
+	<!-- <mvc:interceptors> <mvc:interceptor> <mvc:mapping path="/**/v1.0/sec/login/**" 
+		/> <bean class="cn.com.hohistar.commons.ws.interceptor.DetectDeviceInterceptor" 
+		/> </mvc:interceptor> <mvc:interceptor> <mvc:mapping path="/**" /> <mvc:exclude-mapping 
+		path="/**/sec/v"/> <mvc:exclude-mapping path="/**/sec/reg/m"/> <mvc:exclude-mapping 
+		path="/**/sec/login/m"/> <bean class="cn.com.hohistar.service.auth.client.ws.interceptor.AuthInterceptor" 
+		/> </mvc:interceptor> </mvc:interceptors> -->
+
+
+	<!-- WebSocket for Android -->
+	<!-- <bean id="websocket" class="cn.com.hohistar.service.notify.android.AndroidPushServer" 
+		factory-method="getInstance"/>
+
+	<websocket:handlers>
+		<websocket:mapping path="/android/push" handler="websocket" />
+		<websocket:handshake-interceptors>
+			<bean class="cn.com.hohistar.service.notify.android.HandshakeInterceptor" />
+		</websocket:handshake-interceptors>
+	</websocket:handlers> -->
+
+</beans>
