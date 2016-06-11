@@ -19,6 +19,10 @@ public class AudienceDaoImpl implements AudienceDao {
 		 sessionFactory.getCurrentSession().save(audience);
 		return audience;
 	}
+
+	public Audience getAudienceById(String id) {
+		return  (Audience) sessionFactory.getCurrentSession().get(Audience.class, id);
+	}
 	
 	
 }

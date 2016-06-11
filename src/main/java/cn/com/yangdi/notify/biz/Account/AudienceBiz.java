@@ -17,7 +17,10 @@ public class AudienceBiz {
 	@Transactional
 	public Audience saveAudience(Audience audience){
 		return dao.saveAudience(audience);
-		
+	}
+	@Transactional(readOnly=true)
+	public Audience getAudienceById(String id){
+		return dao.getAudienceById(id);
 	}
 	
 }
