@@ -16,6 +16,7 @@ public class AudienceBiz {
 
 	@Transactional
 	public Audience saveAudience(Audience audience){
+		System.err.println( "1234");
 		return dao.saveAudience(audience);
 		
 	}
