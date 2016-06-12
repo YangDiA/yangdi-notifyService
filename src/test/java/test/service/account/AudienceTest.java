@@ -23,9 +23,10 @@ public class AudienceTest  {
 		Audience audience = new Audience();
 		audience.setUserCode("111");
 		audience.setPassWord("2");
-		audience.setAppKey("kkk");
-		biz.saveAudience(audience);
+		audience.setAppKey("kkk12421342");
+		biz.save(audience);
 		System.err.println("*");
+		biz.saveToDataBaseb(audience);
 	}
 
 }
