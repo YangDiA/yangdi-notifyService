@@ -16,6 +16,7 @@ public class AudienceBiz extends BaseBiz<Audience, String>{
 	@Resource
 	private AudienceDao audienceDao;
 	
+	
 	@Resource(name="audienceDaob")
 	private AudienceDao audienceDaob;
 
@@ -29,7 +30,10 @@ public class AudienceBiz extends BaseBiz<Audience, String>{
 		return audienceDaob.save(audience);
 	}
 
-	
+	@Transactional(readOnly=true)
+	public void singnIn(){
+		System.err.println("测试aop###############");
+	}
 
 	
 	

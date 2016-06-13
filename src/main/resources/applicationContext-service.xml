@@ -20,9 +20,9 @@
 	  
     <context:component-scan  base-package="cn.com.yangdi.notify.schd" />
     
-	 <!--  <bean id="cleanCacheSchd" class="cn.com.yangdi.notify.schd.CleanCacheSchd" />
-	<task:scheduled-tasks  scheduler="scheduler">
-	    <task:scheduled ref="cleanCacheSchd" method="test" 	cron="0/5 * * * * ?" />
-	</task:scheduled-tasks>  -->
+    <!-- 激活组件扫描功能,在包cn.ysh.studio.spring.aop及其子包下面自动扫描通过注解配置的组件 -->
+	<context:component-scan base-package="cn.com.yangdi.notify.aop"/>
+	<!-- 激活自动代理功能 -->
+	<aop:aspectj-autoproxy />
 
 </beans>
