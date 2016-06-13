@@ -16,7 +16,7 @@ import cn.com.yangdi.notify.model.Account.Audience;
 public class AccountApi {
 	
 	@Autowired
-	private AudienceBiz audienceBiz;
+	private AudienceBiz biz;
 	
 	@RequestMapping(method=RequestMethod.GET)
 	@ResponseBody
@@ -26,7 +26,7 @@ public class AccountApi {
 		audience.setUserCode("111");
 		audience.setPassWord("2");
 		audience.setAppKey("kkk");
-		audienceBiz.saveAudience(audience);
+		biz.save(audience);
 		return "aa";
 	}
 }

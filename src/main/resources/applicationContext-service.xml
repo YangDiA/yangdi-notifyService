@@ -9,7 +9,6 @@
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
             http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd"
 	default-lazy-init="true">
-	<task:annotation-driven />
 
 	<!-- Activates scanning of @Service -->
 	<context:component-scan base-package="cn.com.yangdi.notify.biz" />

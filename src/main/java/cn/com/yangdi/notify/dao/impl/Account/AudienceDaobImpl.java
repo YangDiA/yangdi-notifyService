@@ -9,23 +9,24 @@ import cn.com.yangdi.notify.base.BaseDaoImpl;
 import cn.com.yangdi.notify.dao.Account.AudienceDao;
 import cn.com.yangdi.notify.model.Account.Audience;
 
-@Repository("audienceDao")
-public class AudienceDaoImpl extends BaseDaoImpl<Audience, String> implements AudienceDao {
-
-	@Autowired
-	@Qualifier("NotifyDB.SF")
-	private SessionFactory sessionFactory;
+@Repository("audienceDaob")
+public class AudienceDaobImpl implements AudienceDao{
 	
-	@Override
-	public SessionFactory getSessionFactory() {
-		return this.sessionFactory;
+	@Autowired
+	@Qualifier("sessionFactoryb")
+	private SessionFactory sessionFactory;
+
+	
+	public Audience find(String id) {
+		if (id != null) {
+			return (Audience) sessionFactory.getCurrentSession().get( Audience.class, id);
+		}
+		return null;
 	}
 
+	public Audience save(Audience entity) {
+		sessionFactory.getCurrentSession().save(entity);
+		return entity; 
+	}
 
-
-	
-
-	
-	
-	
 }
