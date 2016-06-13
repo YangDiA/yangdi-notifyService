@@ -24,7 +24,8 @@ public class AudienceTest  {
 		audience.setUserCode("111");
 		audience.setPassWord("2");
 		audience.setAppKey("kkk");
-		biz.saveAudience(audience);
+		//biz.saveAudience(audience);
+		biz.singnIn();
 		System.err.println("*");
 	}
 
