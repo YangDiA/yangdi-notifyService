@@ -13,7 +13,7 @@
 	<task:scheduler id="scheduler" pool-size="100" />
 		
 		
-	<!-- Activates scanning of @Service -->
+	<!-- Activates scanning of  -->
 	<context:component-scan base-package="cn.com.yangdi.notify.biz" />
 	
 	<task:annotation-driven/>
